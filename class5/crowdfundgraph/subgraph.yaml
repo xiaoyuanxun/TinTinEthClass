@@ -1,0 +1,27 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: CrowdFund
+    network: goerli
+    source:
+      address: "0x41B3a9912d34AD823552a2ad1a9bFD7B4053b646"
+      abi: CrowdFund
+      startBlock: 8828900
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - FundLog
+        - bid
+      abis:
+        - name: CrowdFund
+          file: ./abis/CrowdFund.json
+      eventHandlers:
+        - event: FundLog(uint256,address,uint256)
+          handler: handleFundLog
+        - event: bid(address,uint256)
+          handler: handlebid
+      file: ./src/crowd-fund.ts

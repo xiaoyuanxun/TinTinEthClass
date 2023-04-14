@@ -1,0 +1,18 @@
+type FundLog @entity(immutable: true) {
+  id: Bytes!
+  fundID: BigInt! # uint256
+  receiver: Bytes! # address
+  goal: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type bid @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  fundID: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
