@@ -2,10 +2,10 @@
     "canisters": {
       "frontend": {
         "frontend": {
-          "entrypoint": "src/App.js"
+          "entrypoint": "build/index.html"
         },
         "source": [
-            "public/"
+            "build/"
         ],
         "type": "assets"
       }
