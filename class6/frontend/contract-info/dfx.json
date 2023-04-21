@@ -1,0 +1,13 @@
+{
+    "canisters": {
+      "frontend": {
+        "frontend": {
+          "entrypoint": "src/App.js"
+        },
+        "source": [
+            "public/"
+        ],
+        "type": "assets"
+      }
+    }
+  }
