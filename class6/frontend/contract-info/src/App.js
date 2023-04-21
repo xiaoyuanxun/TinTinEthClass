@@ -52,7 +52,7 @@ function App() {
   const [_userTokenBlance, setUserTokenBlance] = useState(userTokenBlance);
   const handleQueryUserBlance = async() => {
     await queryUserBlance(_contractAddress, _userAddress);
-    setUserTokenBlance(_userTokenBlance);
+    setUserTokenBlance(userTokenBlance);
   }
 
   const [_toUserAddress, setToUserAddress] = useState("");
